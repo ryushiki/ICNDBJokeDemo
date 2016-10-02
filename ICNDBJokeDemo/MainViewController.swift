@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.register(UINib.init(nibName: Constant.JOKE_TABLE_VIEW_CELL_NIB_NAME, bundle: nil), forCellReuseIdentifier: Constant.JOKE_TABLE_VIEW_CELL_ID)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +22,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 155.0
+    }
+    
+    
 
 }
 
