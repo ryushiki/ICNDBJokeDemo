@@ -11,4 +11,7 @@ import Foundation
 class Constant {
     static let JOKE_TABLE_VIEW_CELL_ID = "JokeCellID"
     static let JOKE_TABLE_VIEW_CELL_NIB_NAME = "JokeTableViewCell"
+    static let JOKE_RANDOM_URL = "http://api.icndb.com/jokes/random"
+    static let MAIN_MODEL_JOKES_KEY_PATH = "jokes"
+    
 }

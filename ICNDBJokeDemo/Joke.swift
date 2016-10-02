@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Joke {
+class Joke: NSObject {
     var jokeContent: String?
     var updateDate: String?
 }

@@ -11,7 +11,9 @@ import UIKit
 class JokeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var jokeContent: UILabel!
+  
     @IBOutlet weak var updateDate: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

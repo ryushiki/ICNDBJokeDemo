@@ -16,7 +16,7 @@
                 <frame key="frameInset" width="320" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffM-vR-aMO">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffM-vR-aMO">
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,13 +35,13 @@
                     <constraint firstItem="ffM-vR-aMO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Fdf-Pc-PdM"/>
                     <constraint firstItem="5fy-U5-OEx" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="lxY-Ge-aJZ"/>
                     <constraint firstItem="5fy-U5-OEx" firstAttribute="top" secondItem="ffM-vR-aMO" secondAttribute="bottom" constant="8" symbolic="YES" id="mT5-1Z-k9P"/>
-                    <constraint firstItem="ffM-vR-aMO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="v92-gJ-2OZ"/>
+                    <constraint firstItem="ffM-vR-aMO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="v92-gJ-2OZ"/>
                     <constraint firstItem="ffM-vR-aMO" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="zij-S0-hbC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="jokeContent" destination="ffM-vR-aMO" id="zjD-C7-dht"/>
-                <outlet property="updateDate" destination="5fy-U5-OEx" id="cQr-Ji-2mD"/>
+                <outlet property="updateDate" destination="5fy-U5-OEx" id="qMs-K9-Spx"/>
             </connections>
             <point key="canvasLocation" x="34" y="107.5"/>
         </tableViewCell>
