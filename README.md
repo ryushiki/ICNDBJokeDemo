@@ -1,1 +1,2 @@
-This is a demo which get jokes from icndb.com using iOS's KVO feather
+This is a demo which show jokes getting from icndb.com
+Using KVO feather for updating UI.
