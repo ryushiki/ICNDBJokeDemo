@@ -53,7 +53,7 @@ class MainViewController: UITableViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let items = object as? MainModel {
-            tableViewItems += items.jokes
+            tableViewItems = items.jokes + tableViewItems
         }
         
         DispatchQueue.main.async {
