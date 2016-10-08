@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 
 class MainModel:NSObject {
-    dynamic var jokes: [Joke] = []
     
     func getJokeRandom() {
         Alamofire.request(Constant.JOKE_RANDOM_URL).responseJSON { (response) in
@@ -26,7 +25,7 @@ class MainModel:NSObject {
                         mydateFormatter.dateFormat = "YYYY/MM/dd hh:mm:ss"
                         let dateString = mydateFormatter.string(from: Date.init())
                         joke.updateDate = dateString
-                        self.jokes = [joke]
+                        CoredataUtil.sharedInstance.insertJoke(joke: joke)
                     }
                 }
             }

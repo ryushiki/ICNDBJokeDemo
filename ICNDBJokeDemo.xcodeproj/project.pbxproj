@@ -21,9 +21,9 @@
 		DF5A9EC11DA154040030E49E /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF5A9EBD1DA14DD60030E49E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DF5A9EC61DA167F40030E49E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5A9EC51DA167F40030E49E /* CoreData.framework */; };
 		DF5A9EC91DA168B50030E49E /* ICNDBJoke.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF5A9EC71DA168B50030E49E /* ICNDBJoke.xcdatamodeld */; };
-		DF5A9EDD1DA16A170030E49E /* FunnyJoke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A9EDB1DA16A170030E49E /* FunnyJoke+CoreDataClass.swift */; };
-		DF5A9EDE1DA16A170030E49E /* FunnyJoke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A9EDC1DA16A170030E49E /* FunnyJoke+CoreDataProperties.swift */; };
-		DF5A9EE01DA16AD70030E49E /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A9EDF1DA16AD70030E49E /* CoreDataTableViewController.swift */; };
+		DF698B1E1DA3F26700BA8441 /* CoredataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF698B1D1DA3F26700BA8441 /* CoredataUtil.swift */; };
+		DF820A131DA6821700A37FDC /* FunnyJoke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF820A111DA6821700A37FDC /* FunnyJoke+CoreDataClass.swift */; };
+		DF820A141DA6821700A37FDC /* FunnyJoke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF820A121DA6821700A37FDC /* FunnyJoke+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,9 +55,9 @@
 		DF5A9EBD1DA14DD60030E49E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DF5A9EC51DA167F40030E49E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DF5A9EC81DA168B50030E49E /* ICNDBJoke.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ICNDBJoke.xcdatamodel; sourceTree = "<group>"; };
-		DF5A9EDB1DA16A170030E49E /* FunnyJoke+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FunnyJoke+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DF5A9EDC1DA16A170030E49E /* FunnyJoke+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FunnyJoke+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DF5A9EDF1DA16AD70030E49E /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
+		DF698B1D1DA3F26700BA8441 /* CoredataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoredataUtil.swift; sourceTree = "<group>"; };
+		DF820A111DA6821700A37FDC /* FunnyJoke+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FunnyJoke+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DF820A121DA6821700A37FDC /* FunnyJoke+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FunnyJoke+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,9 +153,9 @@
 		DF5A9ECA1DA169070030E49E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				DF5A9EDF1DA16AD70030E49E /* CoreDataTableViewController.swift */,
-				DF5A9EDB1DA16A170030E49E /* FunnyJoke+CoreDataClass.swift */,
-				DF5A9EDC1DA16A170030E49E /* FunnyJoke+CoreDataProperties.swift */,
+				DF820A111DA6821700A37FDC /* FunnyJoke+CoreDataClass.swift */,
+				DF820A121DA6821700A37FDC /* FunnyJoke+CoreDataProperties.swift */,
+				DF698B1D1DA3F26700BA8441 /* CoredataUtil.swift */,
 				DF5A9EC71DA168B50030E49E /* ICNDBJoke.xcdatamodeld */,
 			);
 			name = CoreData;
@@ -238,14 +238,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF5A9E9E1DA13DED0030E49E /* MainViewController.swift in Sources */,
-				DF5A9EDE1DA16A170030E49E /* FunnyJoke+CoreDataProperties.swift in Sources */,
+				DF820A131DA6821700A37FDC /* FunnyJoke+CoreDataClass.swift in Sources */,
+				DF698B1E1DA3F26700BA8441 /* CoredataUtil.swift in Sources */,
+				DF820A141DA6821700A37FDC /* FunnyJoke+CoreDataProperties.swift in Sources */,
 				DF5A9EC91DA168B50030E49E /* ICNDBJoke.xcdatamodeld in Sources */,
 				DF5A9E9C1DA13DED0030E49E /* AppDelegate.swift in Sources */,
 				DF5A9EB91DA14A7C0030E49E /* Joke.swift in Sources */,
 				DF5A9EB31DA145B80030E49E /* JokeTableViewCell.swift in Sources */,
-				DF5A9EDD1DA16A170030E49E /* FunnyJoke+CoreDataClass.swift in Sources */,
 				DF5A9EB61DA147840030E49E /* Constant.swift in Sources */,
-				DF5A9EE01DA16AD70030E49E /* CoreDataTableViewController.swift in Sources */,
 				DF5A9EBC1DA14AE00030E49E /* MainModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
