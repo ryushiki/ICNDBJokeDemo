@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DF5A9E971DA13DED0030E49E"
+               BlueprintIdentifier = "DF820A5F1DAA216B00A37FDC"
                BuildableName = "ICNDBJokeDemo.app"
                BlueprintName = "ICNDBJokeDemo"
                ReferencedContainer = "container:ICNDBJokeDemo.xcodeproj">
@@ -28,11 +28,21 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DF820A761DAA216C00A37FDC"
+               BuildableName = "ICNDBJokeDemoTests.xctest"
+               BlueprintName = "ICNDBJokeDemoTests"
+               ReferencedContainer = "container:ICNDBJokeDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DF5A9E971DA13DED0030E49E"
+            BlueprintIdentifier = "DF820A5F1DAA216B00A37FDC"
             BuildableName = "ICNDBJokeDemo.app"
             BlueprintName = "ICNDBJokeDemo"
             ReferencedContainer = "container:ICNDBJokeDemo.xcodeproj">
@@ -55,12 +65,18 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DF5A9E971DA13DED0030E49E"
+            BlueprintIdentifier = "DF820A5F1DAA216B00A37FDC"
             BuildableName = "ICNDBJokeDemo.app"
             BlueprintName = "ICNDBJokeDemo"
             ReferencedContainer = "container:ICNDBJokeDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-com.apple.CoreData.Logging.stderr 1"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -74,7 +90,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DF5A9E971DA13DED0030E49E"
+            BlueprintIdentifier = "DF820A5F1DAA216B00A37FDC"
             BuildableName = "ICNDBJokeDemo.app"
             BlueprintName = "ICNDBJokeDemo"
             ReferencedContainer = "container:ICNDBJokeDemo.xcodeproj">
