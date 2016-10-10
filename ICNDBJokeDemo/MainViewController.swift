@@ -57,7 +57,6 @@ class MainViewController: UITableViewController, NSFetchedResultsControllerDeleg
         }
         
         mainModel = MainModel.init()
-        mainModel?.getJokeRandom()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

@@ -67,18 +67,30 @@ class CoredataUtil: NSObject {
     }
     
     func insertJoke(joke: Joke) {
-        let newJoke = NSEntityDescription.insertNewObject(forEntityName: "FunnyJoke", into: self.mainContext!)
-        newJoke.setValue(joke.jokeContent, forKey: "jokeContent")
-        newJoke.setValue(joke.updateDate, forKey: "updateDate")
         
-        self.mainContext!.perform({
+        
+        let privateMOC = NSManagedObjectContext.init(concurrencyType: .privateQueueConcurrencyType)
+        privateMOC.parent = self.mainContext
+        
+        privateMOC.perform { 
+            let newJoke = NSEntityDescription.insertNewObject(forEntityName: "FunnyJoke", into: privateMOC)
+            newJoke.setValue(joke.jokeContent, forKey: "jokeContent")
+            newJoke.setValue(joke.updateDate, forKey: "updateDate")
+            
             do {
-                try newJoke.managedObjectContext?.save()
-            } catch  {
-                fatalError("Failure to save context: \(error)")
+                try privateMOC.save()
+            } catch {
+                fatalError("Failure to save private context: \(error)")
             }
-        })
-        
+            
+//            self.mainContext!.perform({
+//                do {
+//                    try newJoke.managedObjectContext?.save()
+//                } catch  {
+//                    fatalError("Failure to save context: \(error)")
+//                }
+//            })
+        }
     }
     
 }
