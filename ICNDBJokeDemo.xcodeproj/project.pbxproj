@@ -14,8 +14,6 @@
 		DF820A6E1DAA216B00A37FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF820A6D1DAA216B00A37FDC /* Assets.xcassets */; };
 		DF820A711DAA216B00A37FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF820A6F1DAA216B00A37FDC /* LaunchScreen.storyboard */; };
 		DF820A7C1DAA216C00A37FDC /* ICNDBJokeDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF820A7B1DAA216C00A37FDC /* ICNDBJokeDemoTests.swift */; };
-		DF820A891DAA223C00A37FDC /* FunnyJoke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF820A871DAA223C00A37FDC /* FunnyJoke+CoreDataClass.swift */; };
-		DF820A8A1DAA223C00A37FDC /* FunnyJoke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF820A881DAA223C00A37FDC /* FunnyJoke+CoreDataProperties.swift */; };
 		DF820A911DAA22DF00A37FDC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF820A8B1DAA22DF00A37FDC /* Constant.swift */; };
 		DF820A921DAA22DF00A37FDC /* CoredataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF820A8C1DAA22DF00A37FDC /* CoredataUtil.swift */; };
 		DF820A931DAA22DF00A37FDC /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF820A8D1DAA22DF00A37FDC /* Joke.swift */; };
@@ -25,6 +23,8 @@
 		DF820AA11DAA244C00A37FDC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF820AA01DAA244C00A37FDC /* Alamofire.framework */; };
 		DF820AA31DAA246B00A37FDC /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF820AA01DAA244C00A37FDC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DFB3D91B1DAA792E0037DB17 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB3D91A1DAA792E0037DB17 /* CoreData.framework */; };
+		DFB3D94D1DAB59FA0037DB17 /* FunnyJoke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB3D94B1DAB59FA0037DB17 /* FunnyJoke+CoreDataClass.swift */; };
+		DFB3D94E1DAB59FA0037DB17 /* FunnyJoke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB3D94C1DAB59FA0037DB17 /* FunnyJoke+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +72,6 @@
 		DF820A771DAA216C00A37FDC /* ICNDBJokeDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ICNDBJokeDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF820A7B1DAA216C00A37FDC /* ICNDBJokeDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICNDBJokeDemoTests.swift; sourceTree = "<group>"; };
 		DF820A7D1DAA216C00A37FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF820A871DAA223C00A37FDC /* FunnyJoke+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FunnyJoke+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DF820A881DAA223C00A37FDC /* FunnyJoke+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FunnyJoke+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DF820A8B1DAA22DF00A37FDC /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DF820A8C1DAA22DF00A37FDC /* CoredataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoredataUtil.swift; sourceTree = "<group>"; };
 		DF820A8D1DAA22DF00A37FDC /* Joke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
@@ -82,6 +80,8 @@
 		DF820A901DAA22DF00A37FDC /* MainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		DF820AA01DAA244C00A37FDC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DFB3D91A1DAA792E0037DB17 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DFB3D94B1DAB59FA0037DB17 /* FunnyJoke+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FunnyJoke+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DFB3D94C1DAB59FA0037DB17 /* FunnyJoke+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FunnyJoke+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,9 +149,9 @@
 		DF820A861DAA221600A37FDC /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				DFB3D94B1DAB59FA0037DB17 /* FunnyJoke+CoreDataClass.swift */,
+				DFB3D94C1DAB59FA0037DB17 /* FunnyJoke+CoreDataProperties.swift */,
 				DF820A8C1DAA22DF00A37FDC /* CoredataUtil.swift */,
-				DF820A871DAA223C00A37FDC /* FunnyJoke+CoreDataClass.swift */,
-				DF820A881DAA223C00A37FDC /* FunnyJoke+CoreDataProperties.swift */,
 				DF820A6A1DAA216B00A37FDC /* ICNDBJokeDemo.xcdatamodeld */,
 			);
 			name = CoreData;
@@ -319,10 +319,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF820A661DAA216B00A37FDC /* MainViewController.swift in Sources */,
-				DF820A891DAA223C00A37FDC /* FunnyJoke+CoreDataClass.swift in Sources */,
+				DFB3D94D1DAB59FA0037DB17 /* FunnyJoke+CoreDataClass.swift in Sources */,
 				DF820A6C1DAA216B00A37FDC /* ICNDBJokeDemo.xcdatamodeld in Sources */,
+				DFB3D94E1DAB59FA0037DB17 /* FunnyJoke+CoreDataProperties.swift in Sources */,
 				DF820A921DAA22DF00A37FDC /* CoredataUtil.swift in Sources */,
-				DF820A8A1DAA223C00A37FDC /* FunnyJoke+CoreDataProperties.swift in Sources */,
 				DF820A641DAA216B00A37FDC /* AppDelegate.swift in Sources */,
 				DF820A931DAA22DF00A37FDC /* Joke.swift in Sources */,
 				DF820A911DAA22DF00A37FDC /* Constant.swift in Sources */,
@@ -470,6 +470,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ICNDBJokeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuzhihui.ICNDBJokeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -487,6 +488,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ICNDBJokeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuzhihui.ICNDBJokeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

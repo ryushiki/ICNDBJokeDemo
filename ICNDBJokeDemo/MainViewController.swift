@@ -13,9 +13,10 @@ class MainViewController: UITableViewController, NSFetchedResultsControllerDeleg
 
     var mainModel: MainModel?
     
-    var fetchedResultsController: NSFetchedResultsController<FunnyJoke>? {
-        let fetchRequest =  NSFetchRequest<FunnyJoke>(entityName: "FunnyJoke")
-        let sortDescriptor = NSSortDescriptor(key: "updateDate", ascending: true)
+    lazy var fetchedResultsController: NSFetchedResultsController<FunnyJoke> = {
+        //init a property with a block
+        let fetchRequest: NSFetchRequest<FunnyJoke> = FunnyJoke.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "updateDate", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         let frc = NSFetchedResultsController(
@@ -27,7 +28,7 @@ class MainViewController: UITableViewController, NSFetchedResultsControllerDeleg
         frc.delegate = self
         
         return frc
-    }
+    }()
     
     
     func handleRefresh(sender: AnyObject) {
@@ -40,6 +41,7 @@ class MainViewController: UITableViewController, NSFetchedResultsControllerDeleg
         // Do any additional setup after loading the view, typically from a nib.
         
         tableView.register(UINib.init(nibName: Constant.JOKE_TABLE_VIEW_CELL_NIB_NAME, bundle: nil), forCellReuseIdentifier: Constant.JOKE_TABLE_VIEW_CELL_ID)
+        tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
         let refreshControl = UIRefreshControl.init()
         refreshControl.tintColor = UIColor.blue
@@ -49,7 +51,7 @@ class MainViewController: UITableViewController, NSFetchedResultsControllerDeleg
         tableView.estimatedRowHeight = 100
         
         do {
-            try fetchedResultsController?.performFetch()
+            try fetchedResultsController.performFetch()
         } catch {
             print("An perform fetch error has occured")
         }
@@ -59,7 +61,7 @@ class MainViewController: UITableViewController, NSFetchedResultsControllerDeleg
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if let sections = fetchedResultsController?.sections {
+        if let sections = fetchedResultsController.sections {
             return sections.count
         }
         
@@ -67,7 +69,7 @@ class MainViewController: UITableViewController, NSFetchedResultsControllerDeleg
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let sections = fetchedResultsController?.sections {
+        if let sections = fetchedResultsController.sections {
             let currentSection = sections[section]
             return currentSection.numberOfObjects
         }
@@ -79,10 +81,10 @@ class MainViewController: UITableViewController, NSFetchedResultsControllerDeleg
         let cell = tableView.dequeueReusableCell(
             withIdentifier: Constant.JOKE_TABLE_VIEW_CELL_ID,
             for: indexPath) as! JokeTableViewCell
-        let joke = fetchedResultsController?.object(at: indexPath)
+        let joke = fetchedResultsController.object(at: indexPath)
         
-        cell.jokeContent.text = joke?.jokeContent
-        cell.updateDate.text = joke?.updateDate
+        cell.jokeContent.text = joke.jokeContent
+        cell.updateDate.text = joke.updateDate
         
         return cell
     }

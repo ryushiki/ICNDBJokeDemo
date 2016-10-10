@@ -2,7 +2,7 @@
 //  FunnyJoke+CoreDataProperties.swift
 //  ICNDBJokeDemo
 //
-//  Created by liuzhihui on 16/10/9.
+//  Created by liuzhihui on 16/10/10.
 //  Copyright © 2016年 liuzhihui. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ extension FunnyJoke {
         return NSFetchRequest<FunnyJoke>(entityName: "FunnyJoke");
     }
 
-    @NSManaged public var updateDate: String?
     @NSManaged public var jokeContent: String?
+    @NSManaged public var updateDate: String?
 
 }

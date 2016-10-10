@@ -53,6 +53,19 @@ class CoredataUtil: NSObject {
     }()
     
     
+    func fetchJoke() -> [FunnyJoke]{
+        let fetchRequest: NSFetchRequest<FunnyJoke> = FunnyJoke.fetchRequest()
+        do {
+            if let fetchedJokes = try self.mainContext?.fetch(fetchRequest) {
+                 return fetchedJokes
+            }
+        } catch {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+        
+        return []
+    }
+    
     func insertJoke(joke: Joke) {
         let newJoke = NSEntityDescription.insertNewObject(forEntityName: "FunnyJoke", into: self.mainContext!)
         newJoke.setValue(joke.jokeContent, forKey: "jokeContent")
@@ -60,7 +73,7 @@ class CoredataUtil: NSObject {
         
         self.mainContext!.perform({
             do {
-                try self.mainContext!.save()
+                try newJoke.managedObjectContext?.save()
             } catch  {
                 fatalError("Failure to save context: \(error)")
             }
