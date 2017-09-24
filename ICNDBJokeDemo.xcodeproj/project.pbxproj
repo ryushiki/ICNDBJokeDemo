@@ -20,11 +20,10 @@
 		DF820A941DAA22DF00A37FDC /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF820A8E1DAA22DF00A37FDC /* JokeTableViewCell.swift */; };
 		DF820A951DAA22DF00A37FDC /* JokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF820A8F1DAA22DF00A37FDC /* JokeTableViewCell.xib */; };
 		DF820A961DAA22DF00A37FDC /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF820A901DAA22DF00A37FDC /* MainModel.swift */; };
-		DF820AA11DAA244C00A37FDC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF820AA01DAA244C00A37FDC /* Alamofire.framework */; };
-		DF820AA31DAA246B00A37FDC /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF820AA01DAA244C00A37FDC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DFB3D91B1DAA792E0037DB17 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB3D91A1DAA792E0037DB17 /* CoreData.framework */; };
 		DFB3D94D1DAB59FA0037DB17 /* FunnyJoke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB3D94B1DAB59FA0037DB17 /* FunnyJoke+CoreDataClass.swift */; };
 		DFB3D94E1DAB59FA0037DB17 /* FunnyJoke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB3D94C1DAB59FA0037DB17 /* FunnyJoke+CoreDataProperties.swift */; };
+		DFD333131F77C8160073B5BA /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD333121F77C8160073B5BA /* WebClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +45,6 @@
 			files = (
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DF820AA21DAA246400A37FDC /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				DF820AA31DAA246B00A37FDC /* Alamofire.framework in CopyFiles */,
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -82,6 +71,7 @@
 		DFB3D91A1DAA792E0037DB17 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DFB3D94B1DAB59FA0037DB17 /* FunnyJoke+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FunnyJoke+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DFB3D94C1DAB59FA0037DB17 /* FunnyJoke+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FunnyJoke+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DFD333121F77C8160073B5BA /* WebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFB3D91B1DAA792E0037DB17 /* CoreData.framework in Frameworks */,
-				DF820AA11DAA244C00A37FDC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +170,7 @@
 			children = (
 				DF820A8D1DAA22DF00A37FDC /* Joke.swift */,
 				DF820A901DAA22DF00A37FDC /* MainModel.swift */,
+				DFD333121F77C8160073B5BA /* WebClient.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -222,7 +212,6 @@
 				DF820A5D1DAA216B00A37FDC /* Frameworks */,
 				DF820A5E1DAA216B00A37FDC /* Resources */,
 				DF820A9E1DAA243400A37FDC /* Embed Frameworks */,
-				DF820AA21DAA246400A37FDC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -325,6 +314,7 @@
 				DF820A921DAA22DF00A37FDC /* CoredataUtil.swift in Sources */,
 				DF820A641DAA216B00A37FDC /* AppDelegate.swift in Sources */,
 				DF820A931DAA22DF00A37FDC /* Joke.swift in Sources */,
+				DFD333131F77C8160073B5BA /* WebClient.swift in Sources */,
 				DF820A911DAA22DF00A37FDC /* Constant.swift in Sources */,
 				DF820A961DAA22DF00A37FDC /* MainModel.swift in Sources */,
 				DF820A941DAA22DF00A37FDC /* JokeTableViewCell.swift in Sources */,

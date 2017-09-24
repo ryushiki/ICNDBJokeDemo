@@ -7,27 +7,19 @@
 //
 
 import Foundation
-import Alamofire
 
 class MainModel:NSObject {
     
     func getJokeRandom() {
-        Alamofire.request(Constant.JOKE_RANDOM_URL).responseJSON { (response) in
-            if let JSON = response.result.value as? Dictionary<String, Any> {
-                print("JSON: \(JSON)")
-                
-                if let value = JSON["value"] as? Dictionary<String, Any> {
-                    
-                    let joke = Joke.init()
-                    joke.jokeContent = value["joke"] as? String
-                    if let _ = joke.jokeContent {
-                        let mydateFormatter = DateFormatter()
-                        mydateFormatter.dateFormat = "YYYY/MM/dd hh:mm:ss"
-                        let dateString = mydateFormatter.string(from: Date.init())
-                        joke.updateDate = dateString
-                        CoredataUtil.sharedInstance.insertJoke(joke: joke)
-                    }
-                }
+        let queryItems = ["firstName": "John", "lastName": "Doe"]
+        
+        let webClient = WebClient.init()
+        webClient.request(path: Constant.JOKE_RANDOM_PATH, queryParams: queryItems) { (jokeResult: ResultType<Joke>) in
+            switch jokeResult {
+            case .success(let joke):
+                CoredataUtil.sharedInstance.insertJoke(joke: joke)
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }

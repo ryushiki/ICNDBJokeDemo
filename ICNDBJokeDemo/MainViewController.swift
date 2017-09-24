@@ -49,6 +49,7 @@ class MainViewController: UITableViewController, NSFetchedResultsControllerDeleg
         self.refreshControl = refreshControl
         tableView.allowsSelection = false
         tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         do {
             try fetchedResultsController.performFetch()
